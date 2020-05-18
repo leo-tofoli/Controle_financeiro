@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/aprenda"
+        android:title="Aprenda"
+        android:icon="@drawable/ic_page"/>
+
+    <item
+        android:id="@+id/A"
+        android:title=""/>
+
+    <item
+        android:id="@+id/lancamento"
+        android:title="Controle"
+        android:icon="@drawable/ic_wallet"/>
+</menu>

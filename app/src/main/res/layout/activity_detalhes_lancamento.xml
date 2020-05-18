@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalhesLancamentoActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titulo"
+        android:text="Detalhes"
+        android:textColor="@color/colorTextView"
+        android:textSize="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/layoutTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextView"
+            android:id="@+id/textViewDescricaoLabel"
+            android:text="Descrição:"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="@color/colorTextView"
+            android:id="@+id/textViewDescricaoValue"
+            android:text="Descricao do lancamento"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTitulo"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextView"
+            android:id="@+id/textViewValorLabel"
+            android:text="Valor:"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="@color/colorTextView"
+            android:id="@+id/textViewValorValue"
+            android:text="R$ 0,00"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/layoutUsuario"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextView"
+            android:id="@+id/textViewSenhaLabel"
+            android:text="Data:"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="@color/colorTextView"
+            android:id="@+id/textViewDataValue"
+            android:text="dd/MM/yyyy"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/layoutSenha"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonDeletar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="deletarLancamento"
+            android:text="Deletar"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/buttonAlterar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="alterarLancamento"
+            android:text="Alterar"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonFechar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Fechar"
+        android:onClick="fecharTela"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
